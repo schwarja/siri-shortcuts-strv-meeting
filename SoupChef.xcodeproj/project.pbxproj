@@ -39,7 +39,6 @@
 		606C6DEB2076EF09009F09CA /* SoupChefIntentsUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 606C6DDE2076EF08009F09CA /* SoupChefIntentsUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		606C6DEE2076EF09009F09CA /* SoupChefIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 606C6DD52076EF08009F09CA /* SoupChefIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C1B7805F2119B33100ECC467 /* StartEatingIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B7805C2119B24500ECC467 /* StartEatingIntentHandler.swift */; };
-		C1B780612119B5A200ECC467 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1B780602119B5A200ECC467 /* AppIntentVocabulary.plist */; };
 		D7115420209A48A1005588F4 /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = D7115422209A48A1005588F4 /* Main.storyboard */; };
 		D715F20820897745002A64CD /* OrderHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D715F20620897745002A64CD /* OrderHistoryTableViewController.swift */; };
 		D715F21020897753002A64CD /* SoupMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D715F20C20897753002A64CD /* SoupMenuViewController.swift */; };
@@ -563,7 +562,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1B780612119B5A200ECC467 /* AppIntentVocabulary.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
