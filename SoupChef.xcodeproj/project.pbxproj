@@ -38,6 +38,8 @@
 		606C6DE42076EF08009F09CA /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C6DE32076EF08009F09CA /* IntentViewController.swift */; };
 		606C6DEB2076EF09009F09CA /* SoupChefIntentsUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 606C6DDE2076EF08009F09CA /* SoupChefIntentsUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		606C6DEE2076EF09009F09CA /* SoupChefIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 606C6DD52076EF08009F09CA /* SoupChefIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C1B7805F2119B33100ECC467 /* StartEatingIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B7805C2119B24500ECC467 /* StartEatingIntentHandler.swift */; };
+		C1B780612119B5A200ECC467 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1B780602119B5A200ECC467 /* AppIntentVocabulary.plist */; };
 		D7115420209A48A1005588F4 /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = D7115422209A48A1005588F4 /* Main.storyboard */; };
 		D715F20820897745002A64CD /* OrderHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D715F20620897745002A64CD /* OrderHistoryTableViewController.swift */; };
 		D715F21020897753002A64CD /* SoupMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D715F20C20897753002A64CD /* SoupMenuViewController.swift */; };
@@ -154,6 +156,8 @@
 		60EA6D8820782A9300249FFB /* SoupChef.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoupChef.entitlements; sourceTree = "<group>"; };
 		B830BC70B830CEC000000001 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		BE424C50BE424D6000000001 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		C1B7805C2119B24500ECC467 /* StartEatingIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartEatingIntentHandler.swift; sourceTree = "<group>"; };
+		C1B780602119B5A200ECC467 /* AppIntentVocabulary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppIntentVocabulary.plist; sourceTree = "<group>"; };
 		D70D1C8D20B2604400A5BACB /* MenuItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemView.xib; sourceTree = "<group>"; };
 		D7115421209A48A1005588F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7115423209A805C005588F4 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 				D76D4D4720A8072A005ADCF5 /* Data */,
 				D7195FFB20B244DC00D23684 /* UI */,
 				D720B87320AA734200FCFD81 /* OrderSoupIntentHandler.swift */,
+				C1B7805C2119B24500ECC467 /* StartEatingIntentHandler.swift */,
 				2981E7A220AABB92003259CF /* Support */,
 			);
 			path = Shared;
@@ -323,6 +328,7 @@
 				292B74D020A94D460038A692 /* SoupChefIntents.entitlements */,
 				606C6DD72076EF08009F09CA /* IntentHandler.swift */,
 				606C6DD92076EF08009F09CA /* Info.plist */,
+				C1B780602119B5A200ECC467 /* AppIntentVocabulary.plist */,
 			);
 			path = SoupChefIntents;
 			sourceTree = "<group>";
@@ -557,6 +563,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1B780612119B5A200ECC467 /* AppIntentVocabulary.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +621,7 @@
 			files = (
 				298308C220B0F320006FDD95 /* Intents.intentdefinition in Sources */,
 				606C6DD82076EF08009F09CA /* IntentHandler.swift in Sources */,
+				C1B7805F2119B33100ECC467 /* StartEatingIntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

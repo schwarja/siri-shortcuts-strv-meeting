@@ -20,7 +20,8 @@ class SoupMenuViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        userActivity = NSUserActivity.viewMenuActivity
+        // TODO: 12
+        // userActivity = NSUserActivity.viewMenuActivity
     }
     
     override func updateUserActivityState(_ activity: NSUserActivity) {

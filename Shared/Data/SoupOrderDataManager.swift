@@ -28,16 +28,17 @@ public class SoupOrderDataManager: DataManager<[Order]> {
     /// quickly placing the same order in the future.
     /// - Tag: donate_order
     private func donateInteraction(for order: Order) {
-        let interaction = INInteraction(intent: order.intent, response: nil)
-        interaction.donate { (error) in
-            if error != nil {
-                if let error = error as NSError? {
-                    os_log("Interaction donation failed: %@", log: OSLog.default, type: .error, error)
-                }
-            } else {
-                os_log("Successfully donated interaction")
-            }
-        }
+        // TODO: 9
+//        let interaction = INInteraction(intent: order.intent, response: nil)
+//        interaction.donate { (error) in
+//            if error != nil {
+//                if let error = error as NSError? {
+//                    os_log("Interaction donation failed: %@", log: OSLog.default, type: .error, error)
+//                }
+//            } else {
+//                os_log("Successfully donated interaction")
+//            }
+//        }
     }
 }
 

@@ -22,6 +22,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSSiriUsageDescription</key>
+	<string>Order soup</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>OrderSoupIntent</string>

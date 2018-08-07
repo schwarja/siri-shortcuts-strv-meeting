@@ -8,6 +8,7 @@ The application delegate.
 import UIKit
 import SoupKit
 import os.log
+import Intents
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,23 +19,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      continue userActivity: NSUserActivity,
                      restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        if let intent = userActivity.interaction?.intent as? OrderSoupIntent {
-            handle(intent)
-            return true
-        } else if userActivity.activityType == NSUserActivity.viewMenuActivityType {
-            handleUserActivity()
-            return true
-        }
+        // TODO: 3
+//        if let intent = userActivity.interaction?.intent as? OrderSoupIntent {
+//            handle(orderSoup: intent)
+//            return true
+//        }
+        // TODO: 11
+//        else if let intent = userActivity.interaction?.intent as? INStartWorkoutIntent {
+//            handle(start: intent)
+//        } else if userActivity.activityType == NSUserActivity.viewMenuActivityType {
+//            handleUserActivity()
+//            return true
+//        }
         return false
     }
     
-    private func handle(_ intent: OrderSoupIntent) {
+    private func handle(orderSoup intent: OrderSoupIntent) {
         let handler = OrderSoupIntentHandler()
         handler.handle(intent: intent) { (response) in
             if response.code != .success {
                 os_log("Quantity must be greater than 0 to add to order")
             }
         }
+    }
+    
+    private func handle(start intent: INStartWorkoutIntent) {
+        guard let controller = window?.rootViewController else {
+            return
+        }
+        
+        let alert = UIAlertController(
+            title: "\(intent.workoutName?.spokenPhrase ?? "Job") in progress...",
+            message: nil,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        controller.present(alert, animated: true, completion: nil)
     }
     
     private func handleUserActivity() {
