@@ -40,10 +40,9 @@ class OrderHistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO: 1
-//        INPreferences.requestSiriAuthorization { status in
-//            print(status)
-//        }
+        INPreferences.requestSiriAuthorization { status in
+            print(status)
+        }
         notificationToken = NotificationCenter.default.addObserver(forName: dataChangedNotificationKey,
                                                                    object: soupOrderDateManager,
                                                                    queue: OperationQueue.main) {  [weak self] (notification) in

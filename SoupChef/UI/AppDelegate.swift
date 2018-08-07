@@ -19,19 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      continue userActivity: NSUserActivity,
                      restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        // TODO: 3
-//        if let intent = userActivity.interaction?.intent as? INStartWorkoutIntent {
-//            handle(start: intent)
-//        }
-        // TODO: 11
-//        else if let intent = userActivity.interaction?.intent as? OrderSoupIntent {
-//            handle(orderSoup: intent)
-//            return true
-//        }
-//        else if userActivity.activityType == NSUserActivity.viewMenuActivityType {
-//            handleUserActivity()
-//            return true
-//        }
+        if let intent = userActivity.interaction?.intent as? INStartWorkoutIntent {
+            handle(start: intent)
+        }
+        else if let intent = userActivity.interaction?.intent as? OrderSoupIntent {
+            handle(orderSoup: intent)
+            return true
+        }
+        else if userActivity.activityType == NSUserActivity.viewMenuActivityType {
+            handleUserActivity()
+            return true
+        }
         return false
     }
     
@@ -48,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let controller = window?.rootViewController else {
             return
         }
-        // TODO: 4 - Enable intent vocabulary
+
         let alert = UIAlertController(
             title: "\(intent.workoutName?.spokenPhrase ?? "Job") in progress...",
             message: nil,

@@ -10,14 +10,12 @@ import SoupKit
 
 class IntentHandler: INExtension {
     override func handler(for intent: INIntent) -> Any {
-        // TODO: 2
-//        if intent is INStartWorkoutIntent {
-//            return StartEatingIntentHandler()
-//        }
-        // TODO: 10
-//        else if intent is OrderSoupIntent {
-//            return OrderSoupIntentHandler()
-//        }
+        if intent is INStartWorkoutIntent {
+            return StartEatingIntentHandler()
+        }
+        else if intent is OrderSoupIntent {
+            return OrderSoupIntentHandler()
+        }
         fatalError("Unhandled intent type: \(intent)")
     }
 }
